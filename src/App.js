@@ -663,31 +663,22 @@ import {Table} from 'react-bootstrap';
 
   //program to use state of object
 
-  function App(){
-   
-    const [count,setdata] = useState({
-      name: 'jk',age: 30
-  });
-
-    
-  
-      return (
-        <div className="App">
- <h1>state of object</h1>
- <h1>{count.name}</h1>
- <h1>{count.age}</h1>
- <input type = "text" onChange = {(e)=>{setdata( {age:count.age,name: e.target.value})}}/><br></br>
-//           <input type = "text" onChange = {(e)=>{setdata({name:count.name,age:e.target.value})}}/><br></br>
-
-{/* //or */}
-
-<input type = "text" onChange = {(e)=>{setdata( {...count,name: e.target.value})}}/><br></br>
-//           <input type = "text" onChange = {(e)=>{setdata({...count,age:e.target.value})}}/><br></br>
-        </div>
-      )
-    }
+//   
 
 
+
+////start redux////
+
+import Home from './containers/homecontainer.js';
+
+const App=()=>{
+  return (
+    <div>
+     <Home />
+
+    </div>
+  )
+}
 
 
 export default App;

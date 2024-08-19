@@ -6,7 +6,17 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.navbar .navbar-link{
+  color: #090909;
+  text-decoration: none;
+}
+.navbar .navbar-link:hover{
+  color:rgb(247, 240, 240);
+  text-decoration: none;
+}
+/* .navbar .active{
+  color: aqua;
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -27,6 +37,50 @@
 .App-link {
   color: #61dafb;
 }
+
+.imgdiv{
+  width: 30%;
+  border: black;
+  border-radius: 10px;
+}
+.infodiv{
+  display: inline;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.products{
+  display: flex;
+  align-content: center;
+
+}
+.product{
+  margin: 10px;
+  border: #090909;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px;
+}
+.header{
+  text-align: center;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+  background-color: red;
+  color: aliceblue;
+  border: #090909;
+  border-radius: 2%;
+
+}
+span{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* .cartdiv{
+  float: right;
+} */
 
 @keyframes App-logo-spin {
   from {
