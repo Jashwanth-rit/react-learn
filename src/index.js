@@ -9,8 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { configureStore } from '@reduxjs/toolkit'
 import {Provider} from 'react-redux'
 import rootReducer from './services/reducer/reducer1'
-const store = configureStore(rootReducer)
-
+console.warn("this is index page")
+const store = configureStore({
+  reducer: rootReducer,
+});
+//
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store = {store}>

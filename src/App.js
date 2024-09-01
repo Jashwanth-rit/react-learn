@@ -380,12 +380,12 @@
 //     </div>)
 //     }
 
-import {createRef, useEffect, useState,useRef} from 'react'
-import logo from './logo.svg';
-import './App.css';
-import React,{Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Table} from 'react-bootstrap';
+// import {createRef, useEffect, useState,useRef} from 'react'
+// import logo from './logo.svg';
+// import './App.css';
+// import React,{Component} from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Table} from 'react-bootstrap';
 
 // import User from './Users'
 // import Props from './props'
@@ -670,11 +670,22 @@ import {Table} from 'react-bootstrap';
 ////start redux////
 
 import Home from './containers/homecontainer.js';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Home from './containers/home';
+import Cart from './containers/cartcontainer';
 
 const App=()=>{
+  console.log('this is app page');
   return (
     <div>
-     <Home />
+
+      <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </Router>
 
     </div>
   )
