@@ -113,6 +113,8 @@
   height: auto;
   border-radius: 8px;
 }
+
+
 .infodiv {
   margin-top: 10px;
 }
@@ -121,6 +123,14 @@
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
+
+.infodiv button:hover {
+  background-color: #080808;
+  color: white;
+  border: 5px solid rgb(226, 208, 8);
+}
+
+
 .infodiv button {
   background-color: #ffcc00;
   color: rgb(8, 8, 8);
@@ -130,12 +140,6 @@
   border-radius: 7px;
   cursor: pointer;
 }
-.infodiv button:hover {
-  background-color: #080808;
-  color: white;
-  border: 5px solid rgb(226, 208, 8);
-}
-
 
 /* Styles for the product list */
 .products-list {
@@ -154,6 +158,8 @@
   border: 2px solid black;
   border-radius: 5px;
 }
+
+
 
 /* Specific styles for each product item */
 /* .product-item-0 { background-color: #f9f9f9; }
@@ -179,3 +185,70 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* General styles for the cart container */
+/* .cmegacontainer {
+  padding: 20px;
+} */
+
+/* Align items in a row and center them */
+.cproduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out items evenly */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center; /* Center-align text */
+  width: 100%; /* Take full width */
+  max-width: 800px; /* Limit the width of the product container */
+  margin: 0 auto 15px; /* Center the product container and add space below */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the image is a fixed size and aligned left */
+.cimgdiv img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cproducts{
+  margin-top: 20px;
+}
+/* Flex-grow the infodiv to fill available space */
+.cinfodiv {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the name and price */
+}
+
+/* Display product details inline with suitable spacing */
+.cinfodiv span {
+  font-size: 1.2rem;
+}
+
+
+/* Style the remove button */
+.cproduct button {
+  background-color: #ffcc00;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  font-weight: 900;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+
+
+.cinfodiv button:hover {
+  background-color: #080808;
+  color: white;
+  border: 5px solid rgb(226, 208, 8);
+}
+

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { } from '../App.css';
 
 const Cart = (props) => {
     console.warn('cart :', props.data);
@@ -27,19 +28,18 @@ const Cart = (props) => {
                     <button className='homebut' onClick={gotohome}>Home</button>
                 </div>
             </div>
-            <div className="products">
+            <div className="cproducts">
                 {cartItems.length > 0 ? (
                     cartItems.map((item, index) => (
-                        <div className="product" key={index}>
-                            <div className="imgdiv">
+                        <div className="cproduct" key={index}>
+                            <div className="cimgdiv">
                                 <img src={item.image} alt={item.name} />
                             </div>
-                            <div className="infodiv">
+                            <div className="cinfodiv">
                                 <span>{item.name}</span>
                                 <span>Price: ${item.price}</span>
-                                
-                                <button onClick={() => props.removefromcart()}>Remove</button>
                             </div>
+                            <button onClick={() => props.removefromcart()}>Remove</button>
                         </div>
                     ))
                 ) : (
